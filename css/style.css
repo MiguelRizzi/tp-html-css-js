@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+
+
+/* Paleta de colores */
+
+:root{
+    --color-fondo-1: rgb(24, 28, 48);
+    --color-fondo-2: rgb(230, 221, 196); /* tarjetas, botones y p*/
+    --color-fondo-3: rgb(103, 137, 131); /* footer, h2, bordes tarjetas */
+    --color-fondo-4: rgb(128,128,128); /* recuadro */
+    --color-logo-1: rgb(44, 52, 73);
+    --color-logo-2: rgb(240, 233, 210); 
+    --color-h1: rgb(238, 238, 238);
+    --color-sombras: rgb(0, 0, 0);
+    --color-sombras-2: rgb(41, 41, 41);
+}
+
+
+/* Flex Box */
+
+.flex{
+    display: flex;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.around-center{
+    justify-content: space-around;
+    align-items: center;
+}
+.between-center{
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar */
+
+.navbar{
+    height:40px;
+    background-color: var(--color-fondo-1);
+    padding: 10px;
+}
+.logo-navbar {
+   padding-right: 300px;
+}
+.ul-navbar {
+    list-style: none;
+    list-style-type: none;
+    width: 250px;
+}
+.a-navbar{
+    background-color: var(--color-fondo-2);
+}
+.a-navbar:hover{
+    background-color: var(--color-logo-2);
+}
+
+
+/* botones */
+
+.boton{
+    text-decoration: none;
+    color: var(--color-sombras);
+    box-shadow: 3px 3px var(--color-fondo-3);
+    padding: 10px;
+    border-radius: 12px;
+    display: block;
+    width: 85px;
+    transition: transform 0.3s;
+}
+.boton:hover{
+    transform:scale(1.03);
+    box-shadow: 3px 3px var(--color-fondo-3), 2px 2px 4px white;
+    
+}
+.boton:active{
+    translate: 2px 2px;
+    box-shadow: 1px 1px var(--color-fondo-3);
+}
+
+
+/* Header */
+
+header{
+    background-image: url(../assets/img/codigo.jpg);
+    min-height: 80vh;
+    background-size: cover;
+    font-size: 28px;
+}
+
+h1{
+    color: var(--color-h1);
+}
+
+
+/* Main */
+
+h2{
+    color:var(--color-fondo-3);
+    font-size: 40px;
+}
+.titulo{
+    text-shadow: 3px 3px var(--color-sombras);
+}
+main, article{
+    background-color: var(--color-fondo-1);
+    color: var(--color-fondo-2);
+    text-align: center;
+    padding: 40px 0;
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+
+
+/* Tarjetas de index*/
+
+.contenedor-tarjetas{
+    padding: 60px;
+}
+.tarjeta{
+    width: 350px;
+    height: 400px;
+    background-color: var(--color-fondo-2);
+    border: 5px solid var(--color-fondo-3);
+    flex-direction: column;
+}
+.img-tarjeta{
+    width: 100%;
+}
+.p-tarjeta{
+    color: var(--color-sombras);
+}
+.a-tarjeta{
+    background-color: var(--color-fondo-1);
+    color: var(--color-fondo-2);
+    margin-bottom: 25px;
+}
+.a-tarjeta:hover{
+    background-color: var(--color-logo-1);
+}
+
+
+/* Historia */
+
+.seccion-historia{
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+}
+.invertido{
+    flex-direction: row-reverse;
+}
+.h2-historia{
+    width: 50%;
+}
+.p-historia{
+    width: 50%;
+}
+.sec-video{
+    width: 65%;
+    height: auto;
+    flex-direction: column;
+    border: 3px solid var(--color-sombras);
+    background-color: var(--color-sombras);
+    margin: auto;
+}
+.div-control-vid{
+    border: 3px solid var(--color-sombras);
+    width:100%;
+    border-radius: 10px;
+    background-color: rgb(58, 57, 57);
+    padding: 5px;
+    box-sizing: border-box;
+}
+.div-botones-vid{
+    gap: 10px;
+}
+.boton-vid{
+    background-color: var(--color-logo-2);
+    border:2px solid var(--color-sombras);
+}
+.duracion-vid{
+}
+video{
+    width:100%;
+}
+
+
+/* Juguemos */
+
+.sec-juego{
+    flex-direction: column;
+    gap:50px;
+}
+.div-img-juego {
+    width: 300px;
+    height:450px;
+    background-color: var(--color-fondo-4);
+    border: 2px solid var(--color-sombras);
+}
+.div-img-juego:hover{
+    background-color: var(--color-sombras-2);
+
+}
+.img-juego{
+    width: 300px;
+    height:450px;
+    border: 2px solid var(--color-sombras);
+    transition: transform 0.3s;
+}
+.img-juego:hover{
+    transform: scale(1.005);
+}
+.boton-reiniciar{
+    width:200px;
+    border: 2px solid var(--color-sombras);
+    background-color: var(--color-fondo-2);
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--color-fondo-3);
+
+    padding: 40px;
+}
+.div-footer{
+    gap: 30px;
+}
+.logo-footer{
+    width:100px;
+}
