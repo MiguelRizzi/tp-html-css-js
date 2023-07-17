@@ -13,7 +13,7 @@
     --color-fondo-2: rgb(230, 221, 196); /* tarjetas, botones y p*/
     --color-fondo-3: rgb(103, 137, 131); /* footer, h2, bordes tarjetas */
     --color-fondo-4: rgb(128,128,128); /* recuadro */
-    --color-logo-1: rgb(36, 43, 59);
+    --color-logo-1: rgb(29, 36, 53);
     --color-logo-2: rgb(240, 233, 210); 
     --color-h1: rgb(238, 238, 238);
     --color-sombras: rgb(0, 0, 0);
@@ -81,6 +81,7 @@
     top:-150px;
     z-index: 0;
     transition: top 0.3s;
+    display: none;
 }
 .ul-plegable {
     list-style: none;
@@ -322,6 +323,9 @@ footer{
     }
     .ul-navbar{
         display: none;
+    }
+    .menu-plegable{
+        display: block;
     }
 
 }
