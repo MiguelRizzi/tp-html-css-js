@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     text-align: center;
-
+    scroll-behavior: smooth;
 }
 
 
@@ -13,7 +13,7 @@
     --color-fondo-2: rgb(230, 221, 196); /* tarjetas, botones y p*/
     --color-fondo-3: rgb(103, 137, 131); /* footer, h2, bordes tarjetas */
     --color-fondo-4: rgb(128,128,128); /* recuadro */
-    --color-logo-1: rgb(44, 52, 73);
+    --color-logo-1: rgb(36, 43, 59);
     --color-logo-2: rgb(240, 233, 210); 
     --color-h1: rgb(238, 238, 238);
     --color-sombras: rgb(0, 0, 0);
@@ -44,7 +44,9 @@
 .navbar{
     height:40px;
     background-color: var(--color-fondo-1);
-    padding: 10px;
+    padding: 10px 30px;
+    position:relative;
+    z-index: 3;
 }
 .logo-navbar {
    padding-right: 300px;
@@ -61,27 +63,80 @@
     background-color: var(--color-logo-2);
 }
 
+.icono-hamburguesa{
+    width: 50px;
+    height: 35px;
+
+}
+
+/* menu plagable */
+.menu-plegable{
+    width:100%;
+    background-color: var(--color-logo-1);
+    color: var(--color-fondo-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top:-150px;
+    z-index: 0;
+    transition: top 0.3s;
+}
+.ul-plegable {
+    list-style: none;
+    width: 250px;
+    width:100%;
+}
+.li-plegable{
+    list-style: none;
+    color: var(--color-fondo-2);
+    border-bottom: 3px solid var(--color-fondo-1);
+}
+.a-plegable{
+    text-decoration: none;
+    color: inherit;
+    font-size:32px;
+    text-shadow: 2px 2px var(--color-sombras);
+    transition: transform 0.3s;
+    display:block;
+}
+
+.a-plegable:hover{
+    text-shadow: 2px 2px var(--color-sombras),1px 1px 3px var(--color-fondo-2);
+    transform:scale(1.01);
+}
+
+.mostrar-menu{
+    top:60px;
+}
 
 /* botones */
 
 .boton{
     text-decoration: none;
     color: var(--color-sombras);
-    box-shadow: 3px 3px var(--color-fondo-3);
+    box-shadow: 3px 3px var(--color-fondo-3), 3px 3px 2px var(--color-sombras);;
     padding: 10px;
     border-radius: 12px;
     display: block;
     width: 85px;
     transition: transform 0.3s;
+    border: 2px solid var(--color-sombras-2)
 }
+
 .boton:hover{
-    transform:scale(1.03);
-    box-shadow: 3px 3px var(--color-fondo-3), 2px 2px 4px white;
-    
+    transform:scale(1.02);
+    box-shadow: 3px 3px var(--color-fondo-3), 1px 1px 4px var(--color-fondo-2);
 }
 .boton:active{
     translate: 2px 2px;
     box-shadow: 1px 1px var(--color-fondo-3);
+}
+.boton-hamburguesa{
+    padding:0;
+    background-color: var(--color-fondo-2);
+    display: none;
+    
 }
 
 
@@ -110,6 +165,7 @@ h2{
 }
 main, article{
     background-color: var(--color-fondo-1);
+    background-image: linear-gradient(180deg, var(--color-fondo-1) 60%, var(--color-logo-1) 100%);
     color: var(--color-fondo-2);
     text-align: center;
     padding: 40px 0;
@@ -129,7 +185,9 @@ main, article{
     height: 400px;
     background-color: var(--color-fondo-2);
     border: 5px solid var(--color-fondo-3);
+    border-radius: 4px;
     flex-direction: column;
+    box-shadow: 3px 3px 3px var(--color-sombras);
 }
 .img-tarjeta{
     width: 100%;
@@ -184,7 +242,6 @@ main, article{
 }
 .boton-vid{
     background-color: var(--color-logo-2);
-    border:2px solid var(--color-sombras);
 }
 .duracion-vid{
 }
@@ -204,6 +261,7 @@ video{
     height:450px;
     background-color: var(--color-fondo-4);
     border: 2px solid var(--color-sombras);
+    border-radius: 4px;
 }
 .div-img-juego:hover{
     background-color: var(--color-sombras-2);
@@ -214,13 +272,13 @@ video{
     height:450px;
     border: 2px solid var(--color-sombras);
     transition: transform 0.3s;
+    border-radius: 4px;
 }
 .img-juego:hover{
     transform: scale(1.005);
 }
 .boton-reiniciar{
     width:200px;
-    border: 2px solid var(--color-sombras);
     background-color: var(--color-fondo-2);
 }
 
@@ -236,4 +294,34 @@ footer{
 }
 .logo-footer{
     width:100px;
+}
+
+@media screen and (max-width: 960px){
+    .contenedor-tarjetas{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .div-historia{
+        flex-direction: column;
+        gap:40px;
+    }
+    .invertido{
+        flex-direction: column;
+    }
+    .h2-historia, .p-historia{
+        width: 100%;
+    }
+    .sec-video{
+        width:90%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .boton-hamburguesa{
+        display: block;
+    }
+    .ul-navbar{
+        display: none;
+    }
+
 }

@@ -35,3 +35,4 @@ video.addEventListener('loadeddata', () => {
     progresoVideo.textContent = formatear(0); // progreso = 0
     duracionTotal.textContent = formatear(duracionTotalVideo); // actualiza la duración
 });
+

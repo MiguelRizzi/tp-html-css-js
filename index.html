@@ -8,19 +8,37 @@
     <title>Proyecto Final</title>
 </head>
 <body>
-    <nav class="navbar flex between-center">
-        <div class="logo-navbar">
-            <a href="./index.html">Logo</a>
+    <nav>
+        <div class="navbar flex between-center">
+            <div class="logo-navbar">
+                <a href="./index.html">Logo</a>
+            </div>
+            
+            <ul class="ul-navbar flex around-center" id="navbar-menu">
+                <li class="li-navbar">
+                    <a class="boton a-navbar mayusculas" href="./historia.html">Historia</a>
+                </li>
+                <li class="li-navbar">
+                    <a class="boton a-navbar mayusculas" href="./juego.html">Juguemos</a>
+                </li>
+            </ul>
+            <button class="boton boton-hamburguesa" id="hamburguesa">
+                <img class="icono-hamburguesa" src="./assets/img/hamburguesa.png" alt="Icono menu hambuguesa">
+            </button>
         </div>
-        
-        <ul class="ul-navbar flex around-center">
-            <li class="li-navbar">
-                <a class="boton a-navbar mayusculas" href="./historia.html">Historia</a>
-            </li>
-            <li class="li-navbar">
-                <a class="boton a-navbar mayusculas" href="./juego.html">Juguemos</a>
-            </li>
-        </ul>
+        <div class="menu-plegable">
+            <ul class="ul-plegable">
+                <li class="li-plegable">
+                    <a class="a-plegable" href="./index.html">Inicio</a>
+                </li>
+                <li class="li-plegable"s>
+                    <a class="a-plegable" href="./historia.html">Historia</a>
+                </li>
+                <li class="li-plegable">
+                    <a class="a-plegable" href="./juego.html">Juguemos</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     
     <header class="flex center around-center">
@@ -50,6 +68,6 @@
         </div>
         <p class="p-2-footer">Proyecto Final Miguel Angel Rizzi</p>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
