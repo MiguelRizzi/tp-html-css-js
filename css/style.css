@@ -69,11 +69,34 @@
 }
 
 /* logo */
+svg{
+    animation: aparecer 3.5s forwards;
+}
 svg g{
     perspective: 200px;
+    
 }
 .teclado{
    transform: rotateX(35deg);
+}
+
+@keyframes aparecer {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    90% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        transform: rotateX(30deg);
+    }
 }
 
 
