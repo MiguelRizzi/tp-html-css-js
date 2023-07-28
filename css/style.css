@@ -46,7 +46,7 @@
     background-color: var(--color-fondo-1);
     padding: 10px 30px;
     position:relative;
-    z-index: 3;
+    z-index: 1;
 }
 .logo-navbar {
    padding-right: 300px;
@@ -66,8 +66,16 @@
 .icono-hamburguesa{
     width: 50px;
     height: 35px;
-
 }
+
+/* logo */
+svg g{
+    perspective: 200px;
+}
+.teclado{
+   transform: rotateX(35deg);
+}
+
 
 /* menu plagable */
 .menu-plegable{
@@ -79,23 +87,20 @@
     justify-content: center;
     position:absolute;
     top:-150px;
-    z-index: 0;
-    transition: top 0.3s;
+    transition: top 0.6s;
     display: none;
 }
 .ul-plegable {
     list-style: none;
-    width: 250px;
     width:100%;
 }
 .li-plegable{
     list-style: none;
-    color: var(--color-fondo-2);
     border-bottom: 3px solid var(--color-fondo-1);
 }
 .a-plegable{
     text-decoration: none;
-    color: inherit;
+    color: var(--color-fondo-2);
     font-size:32px;
     text-shadow: 2px 2px var(--color-sombras);
     transition: transform 0.3s;
