@@ -304,6 +304,9 @@ video{
     transition: transform 0.3s;
     border-radius: 4px;
 }
+#mensaje{
+    font-size: 36px;
+}
 .img-juego:hover{
     transform: scale(1.005);
 }
