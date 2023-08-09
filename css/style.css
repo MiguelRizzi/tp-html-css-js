@@ -69,6 +69,7 @@
 }
 
 /* logo */
+
 svg{
     animation: aparecer 3.5s forwards;
 }
@@ -101,6 +102,7 @@ svg g{
 
 
 /* menu plagable */
+
 .menu-plegable{
     width:100%;
     background-color: var(--color-logo-1);
@@ -139,6 +141,7 @@ svg g{
     top:60px;
 }
 
+
 /* botones */
 
 .boton{
@@ -152,7 +155,6 @@ svg g{
     transition: transform 0.3s;
     border: 2px solid var(--color-sombras-2)
 }
-
 .boton:hover{
     transform:scale(1.02);
     box-shadow: 3px 3px var(--color-fondo-3), 1px 1px 4px var(--color-fondo-2);
@@ -272,8 +274,6 @@ main, article{
 .boton-vid{
     background-color: var(--color-logo-2);
 }
-.duracion-vid{
-}
 video{
     width:100%;
 }
@@ -297,7 +297,7 @@ video{
 
 }
 .img-juego,
-.div-img-juego img {
+.div-img-juego img{
     width: 300px;
     height:450px;
     border: 2px solid var(--color-sombras);
@@ -306,10 +306,6 @@ video{
 }
 .img-juego:hover{
     transform: scale(1.005);
-}
-#mensaje{
-    font-size: 36px;
-    
 }
 .boton-reiniciar{
     width:200px;
@@ -329,6 +325,9 @@ footer{
 .logo-footer{
     width:100px;
 }
+
+
+/* Responsive */
 
 @media screen and (max-width: 960px){
     .contenedor-tarjetas{
@@ -360,5 +359,4 @@ footer{
     .menu-plegable{
         display: block;
     }
-
 }
