@@ -296,7 +296,8 @@ video{
     background-color: var(--color-sombras-2);
 
 }
-.img-juego{
+.img-juego,
+.div-img-juego img {
     width: 300px;
     height:450px;
     border: 2px solid var(--color-sombras);
