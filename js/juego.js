@@ -12,7 +12,8 @@ function mostrarMensaje() {
     let childrenId1 = contenedor1.children[0].id;
     let childrenId2 = contenedor2.children[0].id;
     let childrenId3 = contenedor3.children[0].id;
-    
+
+    // comprueba si los ids son iguales para mostrar el mensaje
     if (childrenId1 === img2.id && 
         childrenId2 === img1.id && 
         childrenId3 === img3.id){
@@ -21,33 +22,43 @@ function mostrarMensaje() {
         mensaje.innerHTML = "Perdiste!!! 😞😞😞";
     }
 }
+
 function verSiEstaVacio() {
+    // comprueba si el contenedor de las imagenes esta vacio y llama a mostrarMensaje
     if (contenedorImgs.children.length === 0) {
         mostrarMensaje();
-        console.log(contenedor1)
     }
-
 }
 
 function dragStart(event) {
     event.dataTransfer.setData("text", event.target.id);
 }
+
 function dragOver(event) {
     event.preventDefault();
 }
+
 function drop(event) {
     event.preventDefault();
     const idImgArrastrada = event.dataTransfer.getData("text");
     const imgArrastrada = document.getElementById(idImgArrastrada);
-    event.target.innerHTML = '';
-    event.target.appendChild(imgArrastrada);
-    verSiEstaVacio();
+
+    // comprueba que no se esta dropeando una imagen sobre otra
+    if (event.target.classList.contains("img-juego")) {
+        return;
+    }else{
+        // limpia el contenedor y agrega la imagen arrastrada
+        event.target.innerHTML = '';
+        event.target.appendChild(imgArrastrada);
+        verSiEstaVacio();
+    }
 }
 
 function reiniciarJuego() {
     location.reload();
 }
 
+// event listeners 
 img1.addEventListener("dragstart", dragStart);
 img2.addEventListener("dragstart", dragStart);
 img3.addEventListener("dragstart", dragStart);
