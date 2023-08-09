@@ -307,6 +307,10 @@ video{
 .img-juego:hover{
     transform: scale(1.005);
 }
+#mensaje{
+    font-size: 36px;
+    
+}
 .boton-reiniciar{
     width:200px;
     background-color: var(--color-fondo-2);
